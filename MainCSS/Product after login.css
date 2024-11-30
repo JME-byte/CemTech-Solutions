@@ -1,0 +1,139 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+.hero {
+    background-color: #fff;
+    padding: 50px 0;
+}
+
+.sale-banner {
+    text-align: center;
+    position: relative;
+}
+
+.sale-banner img {
+    width: auto; /* Maintain aspect ratio */
+    height: 200px; /* Set a fixed height to expand the length */
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 0;
+}
+
+.products h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.product {
+    width: calc(33.33% - 20px); /* 3 products per row */
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: 200px; /* Fixed height for uniformity */
+    box-sizing: border-box;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.product a {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.log-out {
+    display: flex;
+    align-items: center;
+    background-color: black; /* Black box background for Log Out */
+    padding: 8px 12px;
+    border-radius: 5px;
+    color: white; /* Text color for Log Out */
+}
+
+.log-out a {
+    color: white; /* Ensure link color is white */
+    text-decoration: none;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .product {
+        width: calc(50% - 20px); /* 2 products per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        width: 100%; /* 1 product per row on very small screens */
+    }
+}

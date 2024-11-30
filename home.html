@@ -1,0 +1,334 @@
+<html>
+ <head>
+  <title>
+   CemTech Solution Ltd.
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: #2d2d2e;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+        }
+        header img {
+            height: 50px;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #f7f2f2;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ff9800;
+        }
+        .cart-login {
+            display: flex;
+            align-items: center;
+        }
+        .cart-login i {
+            margin-right: 10px;
+            transition: color 0.3s;
+        }
+        .cart-login i:hover {
+            color: #ff9800;
+        }
+        .cart-login button {
+            padding: 5px 10px;
+            border: none;
+            background-color: #d8eb32;
+            color: #252424;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .cart-login button:hover {
+            background-color: #88e90a;
+        }
+        .hero {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .hero img {
+            width: 100%;
+            height: auto;
+        }
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3em;
+            font-weight: bold;
+        }
+        .services {
+            background-color: #ffeb3b;
+            text-align: center;
+            padding: 20px;
+        }
+        .services h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .services p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .service-cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .service-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 22%;
+            margin: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+        .service-card i {
+            font-size: 2em;
+            color: #ff9800;
+        }
+        .service-card h3 {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+        .service-card p {
+            font-size: 1em;
+        }
+        footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #ddd;
+        }
+        footer .footer-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        footer .footer-section {
+            width: 30%;
+            margin: 10px 0;
+        }
+        footer .footer-section h4 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        footer .footer-section p, footer .footer-section a {
+            font-size: 1em;
+            color: #000;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        footer .footer-section a:hover {
+            color: #ff9800;
+        }
+        footer .social-icons i {
+            margin: 0 5px;
+            font-size: 1.5em;
+            color: #000;
+            transition: color 0.3s;
+        }
+        footer .social-icons i:hover {
+            color: #ff9800;
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <img alt="CemTech Solutions Ltd. Logo" height="50" src="public/img_header_logo.png" width="150"/>
+   <nav>
+    <a href="home.html">
+     Home
+    </a>
+    <a href="products after login.html">
+     Products
+    </a>
+    <a href="#">
+     Services
+    </a>
+    <a href="#">
+     About
+    </a>
+    <a href="#">
+     Contact
+    </a>
+   </nav>
+   <div class="cart-login">
+    <i class="fas fa-shopping-cart">
+    </i>
+    <button>
+    Sign Up 
+    </button>
+   </div>
+  </header>
+  <div class="hero">
+   <img alt="Construction site with heavy machinery" height="400" src="public/img_group_38.jfif" width="1200"/>
+   <div class="hero-text">
+    CemTech Solution Ltd.
+   </div>
+  </div>
+  <div class="services">
+   <h2>
+    Services
+   </h2>
+   <p>
+    CemTech Solutions Ltd. provides a diverse range of construction services, including concrete and cement products, framing lumber and plywood, steel and rebar for reinforcement, masonry materials, roofing solutions, and a variety of tools and equipment.
+   </p>
+   <div class="service-cards">
+    <div class="service-card">
+     <i class="fas fa-hard-hat">
+     </i>
+     <h3>
+      Contractor
+     </h3>
+     <p>
+      At CemTech Solutions Ltd, our experienced contractors bring projects to life with precision and professionalism. We specialize in a wide range of construction services, ensuring quality workmanship and timely delivery for every job.
+     </p>
+    </div>
+    <div class="service-card">
+     <i class="fas fa-headset">
+     </i>
+     <h3>
+      Web Support
+     </h3>
+     <p>
+      Our dedicated web support team at CemTech Solutions Ltd is here to assist you with all your online needs. From troubleshooting to guidance, we ensure your online experience is seamless. Visit our website for services and products.
+     </p>
+    </div>
+    <div class="service-card">
+     <i class="fas fa-phone-alt">
+     </i>
+     <h3>
+      Contact
+     </h3>
+     <p>
+      Have questions or need assistance? Get in touch with CemTech Solutions Ltd today. Our team is ready to help you with inquiries, quotes, and support. Reach out to us to discover how we can assist with your construction needs.
+     </p>
+    </div>
+    <div class="service-card">
+     <i class="fas fa-drafting-compass">
+     </i>
+     <h3>
+      Architech
+     </h3>
+     <p>
+      Our skilled architects at CemTech Solutions Ltd combine creativity and functionality to bring your vision to life. We work closely with clients to design innovative and practical solutions that meet specific needs and preferences.
+     </p>
+    </div>
+   </div>
+  </div>
+  <footer>
+   <div class="footer-content">
+    <div class="footer-section">
+     <h4>
+      Menu
+     </h4>
+     <p>
+      <a href="#">
+       Home
+      </a>
+     </p>
+     <p>
+      <a href="#">
+       Products
+      </a>
+     </p>
+     <p>
+      <a href="#">
+       Services
+      </a>
+     </p>
+     <p>
+      <a href="#">
+       About
+      </a>
+     </p>
+     <p>
+      <a href="#">
+       Contact
+      </a>
+     </p>
+    </div>
+    <div class="footer-section">
+     <h4>
+      Contacts
+     </h4>
+     <p>
+      President: Jason P. Laver
+     </p>
+     <p>
+      +1 (234) 567-8910
+     </p>
+     <p>
+      1234 Elm St, City, State
+     </p>
+     <p>
+      CemTechSolutionsLtd@gmail.com
+     </p>
+    </div>
+    <div class="footer-section">
+     <h4>
+      Resources
+     </h4>
+     <p>
+      <a href="#">
+       Best practices
+      </a>
+     </p>
+     <p>
+      <a href="#">
+       Case studies
+      </a>
+     </p>
+     <p>
+      <a href="#">
+       Blog
+      </a>
+     </p>
+     <p>
+      <a href="#">
+       Support
+      </a>
+     </p>
+     <p>
+      <a href="#">
+       Resource library
+      </a>
+     </p>
+    </div>
+   </div>
+   <div class="social-icons">
+    <i class="fab fa-facebook-f">
+    </i>
+    <i class="fab fa-twitter">
+    </i>
+    <i class="fab fa-linkedin-in">
+    </i>
+    <i class="fab fa-instagram">
+    </i>
+   </div>
+  </footer>
+ </body>
+</html>

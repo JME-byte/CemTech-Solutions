@@ -1,0 +1,445 @@
+<html>
+ <head>
+  <title>
+   Cemtech Products
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+        .header img {
+            height: 40px;
+        }
+        .header nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.5s; background-color: 0.5s;
+        }
+        .header nav a:hover {
+            color: #fff;
+            background-color: #007bff;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .header .auth-buttons a {
+            margin-left: 10px;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background-color 0.5s, color 0.5s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .header .auth-buttons .sign-in {
+            background-color: #fff;
+            color: #333;
+            border: 1px solid #ddd;
+        }
+        .header .auth-buttons .sign-in:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .header .auth-buttons .register {
+            background-color: #333;
+            color: #fff;
+        }
+        .header .auth-buttons .register:hover {
+            background-color: #007bff;
+        }
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+        .search-bar input {
+            width: 50%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .content {
+            padding: 20px;
+        }
+        .filters {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+        .filters button {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #333;
+            color: #fff;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .filters button:hover {
+            background-color: #007bff;
+        }
+        .filters .sort-buttons button {
+            background-color: #fff;
+            color: #333;
+            border: 1px solid #ddd;
+            margin-left: 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .filters .sort-buttons button:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            justify-content: space-around;
+        }
+        .product-item {
+            width: 200px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px;
+            text-align: center;
+            padding: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .product-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .product-item img {
+            width: 100%;
+            height: auto;
+        }
+        .product-item p {
+            margin: 10px 0;
+        }
+        .product-item .quantity {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .product-item .quantity input {
+            width: 50px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 0 5px;
+        }
+        .product-item .quantity button {
+            padding: 5px 10px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .product-item .quantity button:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .product-item .add-to-cart {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #333;
+            color: #fff;
+            transition: background-color 0.3s, color 0.3s;
+            margin-top: 10px;
+        }
+        .product-item .add-to-cart:hover {
+            background-color: #007bff;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: #fff;
+            border-top: 1px solid #ddd;
+        }
+        .footer div {
+            width: 30%;
+        }
+        .footer div p {
+            margin: 5px 0;
+        }
+        .footer .social-icons i {
+            margin: 0 5px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .footer .social-icons i:hover {
+            color: #007bff;
+        }
+  </style>
+ </head>
+ <body>
+  <header class="header">
+   <img alt="Cemtech Logo" height="40" src="public/img_header_logo.png" width="100"/>
+   <nav>
+    <a href="home.html">
+     Home
+    </a>
+    <a href="products after login.html">
+     Products
+    </a>
+    <a href="#">
+     Services
+    </a>
+    <a href="#">
+     About
+    </a>
+    <a href="#">
+     Contact
+    </a>
+   </nav>
+   <div class="auth-buttons">
+    <a class="sign-in" href="signin.html">
+     Sign in
+    </a>
+    <a class="register" href="signup.html">
+     Register
+    </a>
+   </div>
+  </header>
+  <div class="search-bar">
+   <input placeholder="Search" type="text"/>
+  </div>
+  <div class="filters">
+   <button>
+    New
+   </button>
+   <div class="sort-buttons">
+    <button>
+     Price ascending
+    </button>
+    <button>
+     Price descending
+    </button>
+    <button>
+     Rating
+    </button>
+   </div>
+   <button>
+    Return
+   </button>
+  </div>
+  <div class="product-list">
+   <div class="product-item">
+    <img alt="Product Image" height="200" src="public/img_3c81d2_328b0dea.png" width="150"/>
+    <p>
+    Ingco AG7012 + DB6018P Electric Angle Grinder And Impact Drill Combo Set Power Tools
+    </p>
+    <p>
+     ₱988
+    </p>
+    <div class="quantity">
+     <button onclick="decreaseQuantity('quantity1')">
+      -
+     </button>
+     <input id="quantity1" type="number" value="1"/>
+     <button onclick="increaseQuantity('quantity1')">
+      +
+     </button>
+    </div>
+    <button class="add-to-cart">
+     Add to Cart
+    </button>
+   </div>
+   <div class="product-item">
+    <img alt="Product Image" height="200" src="public/img_e051e37f_73dd_4.png" width="150"/>
+    <p>
+    147pcs Ultimate Home Tool Kit - Complete Hand Tool Set with Portable Case, Ratchet Screwdriver, Hex
+    </p>
+    <p>
+     ₱2,472
+    </p>
+    <div class="quantity">
+     <button onclick="decreaseQuantity('quantity2')">
+      -
+     </button>
+     <input id="quantity2" type="number" value="1"/>
+     <button onclick="increaseQuantity('quantity2')">
+      +
+     </button>
+    </div>
+    <button class="add-to-cart">
+     Add to Cart
+    </button>
+   </div>
+   <div class="product-item">
+    <img alt="Product Image" height="200" src="public/MysteryBox.jpg" width="150"/>
+    <p>
+     MysteryBox
+    </p>
+    <p>
+     ₱1000
+    </p>
+    <div class="quantity">
+     <button onclick="decreaseQuantity('quantity3')">
+      -
+     </button>
+     <input id="quantity3" type="number" value="1"/>
+     <button onclick="increaseQuantity('quantity3')">
+      +
+     </button>
+    </div>
+    <button class="add-to-cart">
+     Add to Cart
+    </button>
+   </div>
+   <div class="product-item">
+    <img alt="Product Image" height="200" src="public/MysteryBox.jpg" width="150"/>
+    <p>
+    MysteryBox
+    </p>
+    <p>
+     ₱1000
+    </p>
+    <div class="quantity">
+     <button onclick="decreaseQuantity('quantity4')">
+      -
+     </button>
+     <input id="quantity4" type="number" value="1"/>
+     <button onclick="increaseQuantity('quantity4')">
+      +
+     </button>
+    </div>
+    <button class="add-to-cart">
+     Add to Cart
+    </button>
+   </div>
+   <div class="product-item">
+    <img alt="Product Image" height="200" src="#" width="150"/>
+    <p>
+     Text
+    </p>
+    <p>
+     ₱0
+    </p>
+    <div class="quantity">
+     <button onclick="decreaseQuantity('quantity5')">
+      -
+     </button>
+     <input id="quantity5" type="number" value="1"/>
+     <button onclick="increaseQuantity('quantity5')">
+      +
+     </button>
+    </div>
+    <button class="add-to-cart">
+     Add to Cart
+    </button>
+   </div>
+  </div>
+  <footer class="footer">
+   <div>
+    <div class="social-icons">
+     <i class="fab fa-facebook-f">
+     </i>
+     <i class="fab fa-twitter">
+     </i>
+     <i class="fab fa-instagram">
+     </i>
+     <i class="fab fa-linkedin-in">
+     </i>
+    </div>
+    <p>
+     Menu
+    </p>
+    <p>
+     Home
+    </p>
+    <p>
+     Products
+    </p>
+    <p>
+     Services
+    </p>
+    <p>
+     About
+    </p>
+    <p>
+     Contact
+    </p>
+   </div>
+   <div>
+    <p>
+     Contacts
+    </p>
+    <p>
+     President Jose P. Laurel Hwy, Lipa City, Batangas
+    </p>
+    <p>
+     09091465009
+    </p>
+    <p>
+     Example@gmail.com
+    </p>
+   </div>
+   <div>
+    <p>
+     Resources
+    </p>
+    <p>
+     Blog
+    </p>
+    <p>
+     Best practices
+    </p>
+    <p>
+     Colors
+    </p>
+    <p>
+     Color wheel
+    </p>
+    <p>
+     Support
+    </p>
+    <p>
+     Developers
+    </p>
+    <p>
+     Resource library
+    </p>
+   </div>
+  </footer>
+  <script>
+   function increaseQuantity(id) {
+            var quantityInput = document.getElementById(id);
+            quantityInput.value = parseInt(quantityInput.value) + 1;
+        }
+
+        function decreaseQuantity(id) {
+            var quantityInput = document.getElementById(id);
+            if (quantityInput.value > 1) {
+                quantityInput.value = parseInt(quantityInput.value) - 1;
+            }
+        }
+  </script>
+ </body>
+</html>
